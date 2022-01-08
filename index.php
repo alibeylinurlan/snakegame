@@ -21,15 +21,9 @@
       direction; // 0left, 1top, 2right, 3bottom
       scor = 0;
       bestscor = 0;
-      snake_head_cor = '.y'+y+' .x'+x;
-      ln = [];
-      ln.push(snake_head_cor);
-      ln.push('.y'+y+' .x'+(x+1));
-      ln.push('.y'+y+' .x'+(x+2));
-      ln.push('.y'+y+' .x'+(x+3));
-      
-
-      
+      snake_head_cor = '.y'+y+' .x'+(x+4);
+      ln = ['.y'+y+' .x'+(x+1),'.y'+y+' .x'+(x+2),'.y'+y+' .x'+(x+3), snake_head_cor];
+        
 
 
       function diamond() {
@@ -103,8 +97,8 @@
 
         yplus = setInterval(y_plus, frame);clearInterval(yplus); 
         yminus = setInterval(y_minus, frame);clearInterval(yminus); 
-        xminus = setInterval(x_minus, frame);
-        xplus = setInterval(x_plus, frame);   clearInterval(xplus);
+        xminus = setInterval(x_minus, frame); clearInterval(xminus);
+        xplus = setInterval(x_plus, frame);   
 
       $(document).keydown(function(e){
         if (e.keyCode == 37 && direction != 2) { 
