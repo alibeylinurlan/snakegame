@@ -68,6 +68,8 @@
             snake_body.pop();
             if(snake_body.indexOf(head_cor) !== -1){
                 $(".gameover").fadeIn();
+                $(".scr").html('Your score: ' + scor);
+
             }
             
         }
@@ -151,8 +153,11 @@
 </div>
 
 <div class="gameover" style="width:100%;height:100vh;display: flex;justify-content: center;align-items: center;color: red;font-weight: bold;font-size: 50px;z-index: 1;background-color: white;position: fixed;top: 0px;left: 0px;display: none;padding: 20px;">
+    
+    <h4 class="scr" style="color: dodgerblue;"></h4>
     <h1> Game over !
         <br><a href=""><span style="color: green;font-size: 30px;">start new game</span></a></h1>
+        
 </div>
 
 </body>
